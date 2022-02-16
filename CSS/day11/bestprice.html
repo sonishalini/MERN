@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <style> 
+            *{
+                box-sizing: border-box;
+                padding: 0;margin: 0;
+            }
+            .conatainer{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card{
+                width: 30vw;
+                height: 40vh;
+                border: 1px solid black;
+            }
+
+            .card-body{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                /* overflow: hidden; */
+            }
+            .offer{
+                font-size: 2rem;
+                color: rgb(107, 18, 190);
+                position:absolute;
+                border: 1px solid black;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                backdrop-filter: blur(10px);
+                transition: opacity 0.5rem;
+            }
+            .thumbnail{
+                width: 100%;height: 100%;
+                padding: 1rem;
+                
+            }
+            .price{
+                position:absolute;
+                top:100%;
+                width: 100%;
+                font-size: 1.5rem;
+                background-color:chartreuse;
+                text-align: center;
+                padding: 0.2rem;
+
+                display: flex;
+                align-items: center;
+                /* justify-content: line-through; */
+            }
+            .old-price{
+                font-size: 1rem;
+                color: white;
+                text-decoration: line-through;
+                
+            }
+            .new-price{
+                color: white;
+            }
+            .card-body:hover .offer{
+                opacity:0%;
+            }
+            .card-body:hover .price{
+                top: 86%;
+            }
+            .best-price{
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                transform: translate(35px, -10px) rotateZ(45deg);
+                text-align: center;
+                border: 1px solid black;
+                padding: 0.2rem 1rem;
+                background-color: green;
+                color: white;
+            }
+            
+
+            
+        </style>
+    </head>
+    <body>
+        <section class="conatainer">
+            <section class="card">
+                <section class="card-body">
+                    <p class="best-price">Best Price</p>
+                    <h1 class="offer">50% Off</h1>
+                    <p class="price">
+                        <span class="old-price">1000/-</span>
+                        <span class="new-price">500/-</span>
+                    </p>
+                    <img src="./images/img1.jpeg" alt="img-thumbnail">
+                </section>
+                <section class="card-body">
+                    <h1 class="offer">50% Off</h1>
+                    <p class="price">
+                        <span class="old-price">1000/-</span>
+                        <span class="new-price">500/-</span>
+                    </p>
+                    <img src="./images/img1.jpeg" alt="img-thumbnail">
+                </section>
+                <section class="card-body">
+                    <h1 class="offer">50% Off</h1>
+                    <p class="price">
+                        <span class="old-price">1000/-</span>
+                        <span class="new-price">500/-</span>
+                    </p>
+                    <img src="./images/img1.jpeg" alt="img-thumbnail">
+                </section>
+            </section>    
+        </section>
+    </body>
+</html>

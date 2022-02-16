@@ -1,0 +1,75 @@
+<!-- ANIMATION  -->
+<html>
+    <head>
+        <style> 
+            *{
+                box-sizing: border-box;
+                padding: 0;margin: 0;
+            }
+            .container{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+            }
+            .container:hover
+            {
+                animation-play-state: paused;
+            }
+            .btn{
+                padding: 1.5rem 8rem;
+                font-size: 2rem;
+                background-color: white;
+            }
+            .btn:hover{
+                animation-name: blink;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-iteration-count: 2;
+                /* animation-iteration-count: infinite; */
+                animation-direction: alternate;
+                /* animation-timing-function: ease-in; */
+                /* animation-timing-function: ease-in-out; */
+                animation-timing-function: linear;
+               
+            }
+            @keyframes blink {
+                0%{
+                    /* transform: translateX(0px); */
+                    background-color: white;
+                    color: black;
+                    transform: translateY(0px);
+                }
+
+                50%{
+                    /* transform: translateX(0px); */
+                    background-color: rgb(221, 34, 34);
+                    color: black;
+                    transform: translateY(0px);
+                }
+
+                100%{
+                    /* transform: translateX(100px); */
+                    background-color: green;
+                    color: white;
+            {}        transform: translateY(100px);
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <button class="btn">CLICK</button>
+        </section>
+        
+    </body>
+</html>

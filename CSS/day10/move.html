@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style> 
+            *{
+                box-sizing: border-box;
+                padding: 0;margin: 0;
+            }
+            .container{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .btn{
+                padding: 1rem 6rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                cursor: pointer;
+                /* transform:rotate();
+                transform: translate();
+                transform: scale();
+                transform: skew(); */
+                transform-origin: center;
+                transform: perspective(100px) ;
+
+                /* animation  */
+                transition-property: transform;
+                transition-duration: 0.5s;
+                /* transform: skewY(60deg); */
+                transform: skewX(10deg);
+            }
+            .btn:hover{
+               /* move the element */
+               /* transform: translateY(100px);  */
+               /* its work ratio  */
+               /* transform: scaleX(0.5); */
+               /* transform: scale(2); */
+               /* transform: scaleY(0.5); */
+               
+            }
+       </style>
+    </head>
+    <body>
+        <section class="container">
+            <button class="btn">button</button>
+        </section>
+    </body>
+</html>

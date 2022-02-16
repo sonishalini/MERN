@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <style>
+      .container {
+      }
+      .price::before {
+        content: "\f156";
+        font-family: fontAwesome;
+        font-size: 1.5rem;
+        color: red;
+        margin-right: 0.2rem;
+      }
+      .price::after {
+        content: "/-";
+        margin-left: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p></p>
+      <span class="price fa">100</span>
+
+      <!-- <button class="price">4000</button> -->
+    </section>
+  </body>
+</html>

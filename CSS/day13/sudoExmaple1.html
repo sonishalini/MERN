@@ -1,0 +1,43 @@
+<!-- devlopment ke liye impotant sudo element -->
+<html>
+  <head>
+    <style>
+      .container {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+      }
+      .text-red {
+        color: red;
+      }
+      span {
+        font-size: 2rem;
+      }
+      .text::before,
+      .text::after {
+        content: '"';
+        color: red;
+        margin: 0 0.5rem;
+        transition: margin 0.5s;
+      }
+      .text:hover::before,
+      .text:hover::after {
+        margin: 0 0.2rem;
+      }
+
+      /* .text::after {
+        content: "hello";
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <p class="text">
+        <span class="text-red"></span>
+        Testing Shastra
+        <span class="text-red"> </span>
+      </p>
+    </section>
+  </body>
+</html>

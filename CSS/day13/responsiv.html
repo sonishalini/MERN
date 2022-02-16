@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+      }
+
+      /* default desktop */
+      body {
+        background-color: red;
+      }
+      /* laptop */
+      @media screen and (max-width: 900px) and(min-width:600px) {
+        body {
+          background-color: green;
+        }
+        /* tablet & mobile */
+        @media screen and (max-width: 699px) and(min-width:200px) {
+          body {
+            background-color: magenta;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
