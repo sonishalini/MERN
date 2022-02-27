@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //function --- block of code executed
+      var varOne = 5;
+      var varTwo = 20; //global variable
+      var result = 0;
+      // function definition |100% local variable | pure funtion
+      function sub(numberOne, NumberTwo) {
+        //   result is a local variable
+        // var varOne = 5;
+        var result = varTwo - varOne; // lexical scope varibale
+        console.log(result);
+      }
+      //   function call
+      // sub(varOne, varTwo); //actual parameters
+      // sub(10, 20);
+    </script>
+  </body>
+</html>

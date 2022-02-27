@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // General / Comman Function
+      function add(paraOne, ParaTwo, funDef) {
+        funDef("actualPara");
+        //code
+      }
+      add("paraOne", 10, function () {}); //function call
+      // Expression / Anonymous Function
+      var varOne = function (paraOne) {
+        //code
+      };
+      varOne("paraOne");
+
+      // Inline / Callback Funtion
+      add(10, "hello", function (formalPara) {
+        //code
+      });
+      // Immediate Invoke Expression Function IIEF
+      // library developmenet ke liye jada use hota hai
+      // define bhi karana hai & immeditely inwalk
+      // advantage -- global variable ke issue ko avoid karne ke liye simple iska use kar sakte hai
+
+      (function (data) {
+        //(data) catch
+        //code
+        console.log("IIEF", data);
+      })("hello"); //call hota hai yaha par ham function parameter pass karte hai
+    </script>
+  </body>
+</html>
+<!--   -->

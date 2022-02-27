@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Closure function -->
+    <script>
+      varOne = 10;
+      varTwo = 5;
+
+      function sub(numberOne, numberTwo) {
+        var result = numberOne - numberTwo;
+
+        function innerFunction() {
+          result = result + 1;
+          return result; // Lexical scope variable
+        }
+        return innerFunction;
+      }
+
+      var fun = sub(10, 5);
+      var subResult = fun();
+      fun();
+      subResult = fun();
+      var funOne = sub(5, 3);
+      subResultOne = funOne(); //3
+      console.log(subResult); //8
+      console.log(subResultOne); //6
+    </script>
+  </body>
+</html>
