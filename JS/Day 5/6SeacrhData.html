@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // collections of array & jsObejct && array methods
+      var BatchList = [
+        {
+          bName: "React (MERN) FullStack",
+          bTime: "8:00 AM",
+          bDuration: 6,
+          StudentCount: 6,
+        },
+        {
+          bName: "React (MERN) Full Stack",
+          bTime: "1:00 PM",
+          bDuration: 3,
+          StudentCount: 10,
+        },
+        {
+          bName: "Front End",
+          bTime: "5:00 PM",
+          bDuration: 1.5,
+          StudentCount: 6,
+        },
+        {
+          bName: "Node JS API",
+          bTime: "2:00 PM",
+          bDuration: 4,
+          StudentCount: 17,
+        },
+      ]; //object array | JSON array
+
+      console.log(BatchList);
+      /* Array and Logic
+
+      add data array ==> array.push()
+      delete data array ==> array.splice()
+
+      seaeching ==>
+              array.find()
+              array.findIndex()
+              array.filter()
+
+      convert to other arrayn  format ===> array.map()
+
+      convert to string format ===> array.join()
+
+      accumulate(join the data) data of array ===> reduce()
+
+      */
+
+      //  search data ===> find(),findeIndex(),filter()
+      var search = "React (MERN) Full Stack";
+      var foundBtach = BatchList.find(function (batch) {
+        return batch.bName === search;
+      }); // returns only once, in return we get object on success
+      //if data dose't we get undefined
+
+      var search = "React (MERN) Full Stack";
+      var foundBtachIndex = BatchList.findIndex(function (batch) {
+        return batch.bName === search;
+      }); // return only once, in return we get index number on success
+      //if data dose't we get -1 value
+
+      //print data
+      console.log(foundBtachIndex);
+    </script>
+  </body>
+</html>

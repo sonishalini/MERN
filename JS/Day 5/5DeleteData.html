@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var BatchList = [
+        {
+          bName: "React (MERN) FullStack",
+          bTime: "8:00 AM",
+          bDuration: 6,
+          StudentCount: 6,
+        },
+        {
+          bName: "Advance JavaScript",
+          bTime: "1:00 PM",
+          bDuration: 3,
+          StudentCount: 10,
+        },
+        {
+          bName: "Front End",
+          bTime: "5:00 PM",
+          bDuration: 1.5,
+          StudentCount: 6,
+        },
+        {
+          bName: "Node JS API",
+          bTime: "2:00 PM",
+          bDuration: 4,
+          StudentCount: 17,
+        },
+      ];
+      /* Array and Logic
+
+      add data array ==> array.push()
+      delete data array ==> array.splice()
+
+      seaeching ==>
+              array.find()
+              array.findIndex()
+              array.filter()
+
+      convert to other arrayn  format ===> array.map()
+
+      convert to string format ===> array.join()
+
+      accumulate(join the data) data of array ===> reduce()
+
+      */
+
+      console.log(BatchList);
+      //  delete a data ====> splice
+      var index = 1;
+      // BatchList.splice(deleteIndex,deleteCount);
+      BatchList.splice(index, 2);
+
+      //print data
+      console.log(BatchList);
+    </script>
+  </body>
+</html>
