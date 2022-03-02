@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //callback function ka use karege
+      var numberOne = 10;
+      var numberTwo = 20;
+
+      //add
+      function add(varOne, varTwo, callback) {
+        var result = varOne + varTwo;
+        callback(result);
+      }
+      //div
+      var div = function (varOne, varTwo, callback) {
+        var result = varOne / varTwo;
+        callback(result);
+      };
+      //mul
+      function mult(varOne, varTwo, callback) {
+        var result = varOne * varTwo;
+        callback(result);
+      }
+
+      add(numberOne, numberTwo, function (addResult) {
+        //addResult =10,20 =30
+        // console.log(addResult);
+        div(addResult, numberTwo, function (divResult) {
+          //divResult = 30,20=1.5
+          //   console.log(divResult);
+          mult(divResult, numberTwo, function (multResult) {
+            console.log(multResult);
+          }); //1.5,20 =30
+        });
+      });
+
+      //dynamic function
+      add(10, 20, function (addResult) {
+        var pie = 3.14;
+        var result = pie * addResult;
+        console.log(result);
+      });
+      console.log("hello");
+    </script>
+  </body>
+</html>

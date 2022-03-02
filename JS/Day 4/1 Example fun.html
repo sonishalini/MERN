@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var numberOne = 10;
+      var numberTwo = 20;
+
+      //add
+      function add(varOne, varTwo) {
+        var result = varOne + varTwo;
+        return result;
+      }
+      //div
+      var div = function (varOne, varTwo) {
+        var result = varOne / varTwo;
+        return result;
+      };
+      //multi
+      function multi(varOne, varTwo) {
+        var result = varOne * varTwo;
+        return result;
+      }
+
+      var addResult = add(numberOne, numberTwo); //10,20 =30
+      var divResult = div(addResult, numberTwo); //30,20 =1.5
+      var multiResult = multi(divResult, numberTwo); //1.5,20 =30
+      console.log(multiResult); //final result
+    </script>
+  </body>
+</html>
