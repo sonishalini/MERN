@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var ajaxDataContainer = document.querySelector("#ajax-data-container");
+      //fetch
+      async function ajax() {
+        try {
+          var response = await fetch("/home.html");
+          var data = await response.text();
+          ajaxDataContainer.innerHTML = data;
+        } catch (error) {}
+      }
+      // function ajax(){
+      // fetch("/home.html")
+      // .then(function(response){
+      //     return response.text()
+      // })
+      //  .then(function(data){
+      //     console.log(data);
+      //     ajaxDataContainer.innerHTML=data;
+      // });
+      ajax();
+    </script>
+  </body>
+</html>

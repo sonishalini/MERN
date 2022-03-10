@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="ajax()">Get Data</button>
+    <div id="ajax-data-container"></div>
+    <script>
+      var ajaxDataContainer = document.querySelector("#ajax-data-container");
+      // xhr
+      /*cretae xml http request(asynchronous javascript and xml*/
+      /*xhr*/
+      function ajax() {
+        var xhr = new XMLHttpRequest(); //1st ===>0
+
+        // init/open connection
+        /*GET POST DELETE PUT*/
+        xhr.open("GET", "/home.html"); // 2nd ====>1  live server get ko support karta hai
+        //send () request
+        xhr.send(); //3rd ====>2
+        //handler to hand th response
+        //response will ht to clent //4th state ====>3
+        //on connection close 5th state state ====>4
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              var data = xhr.responseText;
+              ajaxDataContainer.innerHTML = data;
+              //   console.log(data);
+            } else {
+              alert(`Request Error Occurs:${xhr.status} ${xhr.statusText}`);
+            }
+          }
+        };
+      }
+      ajax();
+      //fetch
+    </script>
+  </body>
+</html>
