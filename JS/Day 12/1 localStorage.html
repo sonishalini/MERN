@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var text = "tetsing shastra";
+      //save new data
+      //   localStorage.setItem("company", text);
+      // localStorage.setItem("company", JSON.stringify(text)); //obejct===>string
+      localStorage.setItem("company", 1);
+      //update data
+      //   localStorage.setItem("company", hello);
+
+      //delete data(single)
+      //   localStorage.removeItem("company");
+
+      //delete data (all)
+      //   localStorage.clear();
+
+      //get data
+      var data = localStorage.getItem("company");
+      var data = JSON.parse(); //string ===> jsObject
+      // if key data is not available we get null as a data
+      console.log(data);
+    </script>
+  </body>
+</html>
